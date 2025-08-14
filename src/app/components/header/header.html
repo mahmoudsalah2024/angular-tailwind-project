@@ -1,0 +1,16 @@
+<header class="bg-gray-200 dark:bg-gray-800 flex justify-between p-4">
+  <div class="flex items-center">
+    <a routerLink="/">
+      <img src="logo.png" alt="logo" class="dark:invert w-40">
+    </a>
+  </div>
+  <nav class="flex items-center space-x-4">
+    <a routerLink="" routerLinkActive="active dark:invert" [routerLinkActiveOptions]="{ exact: true }" class="dark:text-gray-200 text-gray-800">Home</a>
+    <a routerLink="about" routerLinkActive="active dark:invert" [routerLinkActiveOptions]="{ exact: true }" class="dark:text-gray-200 text-gray-800">About</a>
+    <a routerLink="contact" routerLinkActive="active dark:invert" [routerLinkActiveOptions]="{ exact: true }" class="dark:text-gray-200 text-gray-800">Contact</a>
+  </nav>
+  <button id="toggleButton" class="dark:bg-gray-300 bg-gray-700 text-gray-200 dark:text-gray-800 p-2 rounded-md" (click)="toggleDarkMode()">
+    <i [ngClass]="[ 'fa', darkMode ? 'fa-sun' : 'fa-moon' ]"></i> 
+    {{ darkMode ? 'Light Mode' : 'Dark Mode' }}
+  </button>
+</header>
